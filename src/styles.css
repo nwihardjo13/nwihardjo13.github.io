@@ -338,6 +338,7 @@
 #portfolio-dark-render .work-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
   gap: 12px;
 }
 
@@ -347,22 +348,18 @@
   border: 1px solid var(--border);
   background: linear-gradient(180deg, color-mix(in oklab, var(--surface-2) 88%, transparent), color-mix(in oklab, var(--surface) 92%, transparent));
   min-height: 286px;
-  display: flex;
-  flex-direction: column;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 68px 72px minmax(0, 1fr) auto;
   gap: 14px;
 }
 
 #portfolio-dark-render .work .meta {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  align-content: start;
   gap: 8px;
-  overflow-x: auto;
-  padding-bottom: 2px;
-  scrollbar-width: none;
-}
-
-#portfolio-dark-render .work .meta::-webkit-scrollbar {
-  display: none;
+  min-height: 68px;
 }
 
 #portfolio-dark-render .tag {
@@ -387,10 +384,15 @@
   line-height: 1.1;
   font-weight: 800;
   letter-spacing: 0;
+  align-self: start;
+}
+
+#portfolio-dark-render .work p {
+  align-self: start;
 }
 
 #portfolio-dark-render .work .spacer {
-  flex: 1;
+  display: none;
 }
 
 #portfolio-dark-render .work .impact {
@@ -512,20 +514,10 @@
 #portfolio-dark-render .education-logo {
   width: 170px;
   height: 78px;
-  border-radius: 14px;
-  border: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px;
-}
-
-#portfolio-dark-render .education-logo.ucl {
-  background: #ffffff;
-}
-
-#portfolio-dark-render .education-logo.hkust {
-  background: #003366;
+  padding: 0;
 }
 
 #portfolio-dark-render .education-logo img {

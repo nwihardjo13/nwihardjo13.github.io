@@ -350,8 +350,15 @@
   min-height: 286px;
   height: 100%;
   display: grid;
-  grid-template-rows: 68px 44px 128px auto;
-  gap: 10px;
+  grid-template-rows: 126px 128px auto;
+  gap: 12px;
+}
+
+#portfolio-dark-render .work-top {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-self: start;
 }
 
 #portfolio-dark-render .work .meta {
@@ -359,7 +366,7 @@
   flex-wrap: wrap;
   align-content: start;
   gap: 8px;
-  min-height: 68px;
+  min-height: 0;
 }
 
 #portfolio-dark-render .tag {
@@ -740,11 +747,7 @@
   }
 
   #portfolio-dark-render .work {
-    grid-template-rows: auto auto auto auto;
-  }
-
-  #portfolio-dark-render .work .meta {
-    min-height: 0;
+    grid-template-rows: auto auto auto;
   }
 
   #portfolio-dark-render .contact {

@@ -12,7 +12,7 @@ This is a static portfolio with a Node-based build step.
 - Build tool: Vite. It gives a fast local dev server, bundles `src/main.js` and `src/styles.css`, fingerprints built assets, and writes production output to `dist/`.
 - Package manager: npm, with `package-lock.json` committed so GitHub Actions can run reproducible `npm ci` installs.
 - Hosting: GitHub Pages. The Pages workflow builds the site, uploads `dist/`, and deploys it to `https://nwihardjo13.github.io`.
-- Assets: `public/` contains files copied directly into the final build, including the CV PDF, company logos, and `.nojekyll`.
+- Assets: `public/` contains files copied directly into the final build, including `nathaniel_wihardjo_cv.pdf`, company logos, and `.nojekyll`.
 - UI libraries: Lucide icons are loaded from a CDN script. The page itself stays framework-free because the current interaction model does not need React state or routing.
 
 This stack keeps the site cheap to host, easy to deploy, and simple to migrate later if it grows into a React/Vue/Svelte app.

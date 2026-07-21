@@ -604,6 +604,19 @@
   color: var(--muted);
 }
 
+#portfolio-dark-render .site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 12px;
+}
+
 #portfolio-dark-render .reveal {
   opacity: 1;
   transform: none;

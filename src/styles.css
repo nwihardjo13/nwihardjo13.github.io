@@ -350,8 +350,8 @@
   min-height: 286px;
   height: 100%;
   display: grid;
-  grid-template-rows: 68px 72px minmax(0, 1fr) auto;
-  gap: 14px;
+  grid-template-rows: 68px 44px 128px auto;
+  gap: 10px;
 }
 
 #portfolio-dark-render .work .meta {
@@ -380,8 +380,8 @@
 
 #portfolio-dark-render .work h3 {
   color: var(--fg);
-  font-size: 20px;
-  line-height: 1.1;
+  font-size: 19px;
+  line-height: 1.12;
   font-weight: 800;
   letter-spacing: 0;
   align-self: start;
@@ -389,6 +389,7 @@
 
 #portfolio-dark-render .work p {
   align-self: start;
+  line-height: 1.48;
 }
 
 #portfolio-dark-render .work .spacer {
@@ -514,10 +515,20 @@
 #portfolio-dark-render .education-logo {
   width: 170px;
   height: 78px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  padding: 14px;
+}
+
+#portfolio-dark-render .education-logo.ucl {
+  background: #ffffff;
+}
+
+#portfolio-dark-render .education-logo.hkust {
+  background: #003366;
 }
 
 #portfolio-dark-render .education-logo img {
@@ -726,6 +737,14 @@
 
   #portfolio-dark-render .work-grid {
     grid-template-columns: 1fr;
+  }
+
+  #portfolio-dark-render .work {
+    grid-template-rows: auto auto auto auto;
+  }
+
+  #portfolio-dark-render .work .meta {
+    min-height: 0;
   }
 
   #portfolio-dark-render .contact {
